@@ -5,7 +5,7 @@
 }
 
 body {
-  background: linear-gradient(-45deg, #186789, #538f9e, #85bbc9, #186789);
+  background: linear-gradient(-45deg, #3ebaf0, #5fa2b3, #4e7883, #95d2ec);
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
   width: 100%;
@@ -18,7 +18,8 @@ body {
 .div-button {
   border: none;
   border-radius: 15px;
-  color: rgb(247, 132, 66);
+  color: rgb(71, 69, 69);
+  font-weight: 700;
   background-color: transparent;
 }
 
@@ -30,6 +31,11 @@ body {
   width: 600px;
   height: 300px;
   background-image: url(./images/background.jpg);
+  background-position-y: 60%;
+  /*
+  Photo by Taylor Van Riper 
+  https://unsplash.com/@taylorvanriper925?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  */
 
   cursor: pointer;
 }
@@ -44,7 +50,7 @@ body {
 
 .container.flip-back {
   animation-name: flip-back;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-delay: 0s;
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   animation-fill-mode: both;
@@ -54,14 +60,13 @@ body {
   position: absolute;
   left: 5%;
   top: 10%;
-
-  font-weight: 400;
 }
 
 .chip {
   position: absolute;
   left: 8%;
   top: 35%;
+
   border-radius: 7px;
 }
 
@@ -69,6 +74,7 @@ body {
   position: absolute;
   left: 5%;
   top: 65%;
+
   font-size: 24px;
   letter-spacing: 0.06em;
 }
@@ -106,6 +112,16 @@ body {
   top: 63%;
 }
 
+.disappear {
+  transition: 1s;
+  opacity: 0;
+}
+
+.appear {
+  transition: 1s;
+  opacity: 1;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0 50%;
@@ -124,30 +140,21 @@ body {
   }
   100% {
     transform: translateZ(160px) rotateY(180deg);
-    background-image: url(./images/logo.png);
-    background-position: center;
+    background-image: url(./images/background-back.jpg);
+    background-repeat: no-repeat;
   }
 }
 
 @keyframes flip-back {
   0% {
     transform: translateZ(160px) rotateY(180deg);
-    background-image: url(./images/logo.png);
-    background-position: center;
+    background-image: url(./images/background-back.jpg);
+    background-repeat: no-repeat;
   }
 
   100% {
     transform: translateZ(0) rotateY(0);
     background-image: url(./images/background.jpg);
+    background-position-y: 60%;
   }
-}
-
-.disappear {
-  transition: 1s;
-  opacity: 0;
-}
-
-.appear {
-  transition: 1s;
-  opacity: 1;
 }

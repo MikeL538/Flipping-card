@@ -15,8 +15,10 @@ flipBtn.addEventListener("click", function () {
 
   if (cardContainer.classList.contains("flip")) {
     vanish.forEach((element, index) => {
-      element.classList.add("disappear");
-      element.classList.remove("appear");
+      setTimeout(() => {
+        element.classList.add("disappear");
+        element.classList.remove("appear");
+      }, index * 10);
     });
   }
 
@@ -25,7 +27,7 @@ flipBtn.addEventListener("click", function () {
       setTimeout(() => {
         element.classList.remove("disappear");
         element.classList.add("appear");
-      }, index * 50);
+      }, index * 180);
     });
   }
 });
