@@ -121,26 +121,33 @@ body {
 @keyframes flip {
   0% {
     transform: translateZ(0) rotateY(0);
-    /* background-image: url(./images/background.jpg); */
   }
   100% {
     transform: translateZ(160px) rotateY(180deg);
-    /* background-image: url(./images/logo.png); */
-    background-image: none;
-    background-color: transparent;
+    background-image: url(./images/logo.png);
+    background-position: center;
   }
 }
 
 @keyframes flip-back {
   0% {
     transform: translateZ(160px) rotateY(180deg);
-    /* background-image: url(./images/logo.png); */
-    background-image: none;
-    background-color: transparent;
+    background-image: url(./images/logo.png);
+    background-position: center;
   }
 
   100% {
     transform: translateZ(0) rotateY(0);
     background-image: url(./images/background.jpg);
   }
+}
+
+.disappear {
+  transition: 1s;
+  opacity: 0;
+}
+
+.appear {
+  transition: 1s;
+  opacity: 1;
 }

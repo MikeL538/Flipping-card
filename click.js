@@ -1,5 +1,6 @@
 const flipBtn = document.querySelector(".div-button");
 const cardContainer = document.querySelector(".container");
+const vanish = document.querySelectorAll(".vanish");
 
 flipBtn.addEventListener("click", function () {
   if (cardContainer.classList.contains("flip")) {
@@ -10,5 +11,21 @@ flipBtn.addEventListener("click", function () {
     cardContainer.classList.add("flip");
   } else {
     cardContainer.classList.add("flip");
+  }
+
+  if (cardContainer.classList.contains("flip")) {
+    vanish.forEach((element, index) => {
+      element.classList.add("disappear");
+      element.classList.remove("appear");
+    });
+  }
+
+  if (cardContainer.classList.contains("flip-back")) {
+    vanish.forEach((element, index) => {
+      setTimeout(() => {
+        element.classList.remove("disappear");
+        element.classList.add("appear");
+      }, index * 50);
+    });
   }
 });
