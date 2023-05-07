@@ -8,7 +8,7 @@ body {
   background: linear-gradient(-45deg, #3ebaf0, #5fa2b3, #4e7883, #95d2ec);
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -31,29 +31,13 @@ body {
   width: 600px;
   height: 300px;
   background-image: url(./images/background.jpg);
-  background-position-y: 60%;
+  background-position: center;
   /*
   Photo by Taylor Van Riper 
   https://unsplash.com/@taylorvanriper925?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
   */
 
   cursor: pointer;
-}
-
-.container.flip {
-  animation-name: flip;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  animation-fill-mode: both;
-}
-
-.container.flip-back {
-  animation-name: flip-back;
-  animation-duration: 2s;
-  animation-delay: 0s;
-  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  animation-fill-mode: both;
 }
 
 .card-title {
@@ -112,15 +96,23 @@ body {
   top: 63%;
 }
 
+.container.flip {
+  animation: flip 1.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+.container.flip-back {
+  animation: flip-back 1.3s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
 .disappear {
   transition: 0.5s;
-  transition-delay: 0.3s;
+  transition-delay: 0.45s;
   opacity: 0;
 }
 
 .appear {
   transition: 0.5s;
-  transition-delay: 0.9s;
+  transition-delay: 0.45s;
   opacity: 1;
 }
 
@@ -143,7 +135,6 @@ body {
   100% {
     transform: translateZ(160px) rotateY(180deg);
     background-image: url(./images/background-back.jpg);
-    background-repeat: no-repeat;
   }
 }
 
@@ -151,13 +142,11 @@ body {
   0% {
     transform: translateZ(160px) rotateY(180deg);
     background-image: url(./images/background-back.jpg);
-    background-repeat: no-repeat;
   }
 
   100% {
     transform: translateZ(0) rotateY(0);
     background-image: url(./images/background.jpg);
-    background-position-y: 60%;
   }
 }
 
