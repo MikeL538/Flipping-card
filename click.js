@@ -15,19 +15,15 @@ flipBtn.addEventListener("click", function () {
 
   if (cardContainer.classList.contains("flip")) {
     vanish.forEach((element, index) => {
-      setTimeout(() => {
-        element.classList.add("disappear");
-        element.classList.remove("appear");
-      }, index * 10);
+      element.classList.add("disappear");
+      element.classList.remove("appear");
     });
   }
 
   if (cardContainer.classList.contains("flip-back")) {
     vanish.forEach((element, index) => {
-      setTimeout(() => {
-        element.classList.remove("disappear");
-        element.classList.add("appear");
-      }, index * 180);
+      element.classList.remove("disappear");
+      element.classList.add("appear");
     });
   }
 });

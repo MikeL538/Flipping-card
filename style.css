@@ -113,12 +113,14 @@ body {
 }
 
 .disappear {
-  transition: 1s;
+  transition: 0.5s;
+  transition-delay: 0.3s;
   opacity: 0;
 }
 
 .appear {
-  transition: 1s;
+  transition: 0.5s;
+  transition-delay: 0.9s;
   opacity: 1;
 }
 
@@ -156,5 +158,11 @@ body {
     transform: translateZ(0) rotateY(0);
     background-image: url(./images/background.jpg);
     background-position-y: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 100vw;
   }
 }
