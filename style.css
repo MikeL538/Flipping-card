@@ -9,11 +9,11 @@ body {
   animation: gradient 20s ease infinite;
   background: linear-gradient(
     -45deg,
-    #2fff00,
-    #00ff37,
-    #1d6e00,
-    #1d6e00,
-    #00ff37
+    #89cff0,
+    #5076bd,
+    #0096ff,
+    #5076bd,
+    #89cff0
   );
   background-size: 600% 600%;
   display: flex;
