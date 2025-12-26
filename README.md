@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-Card that flips after click.
-
-https://mikel538.github.io/Flipping-card/
-=======
 # Flipping-Card
 
 Stack: HTML, CSS, JS  
@@ -18,4 +13,3 @@ Cel projektu:
 - praktyczne użycie JavaScript do obsługi interakcji
 - implementacja animacji i transformacji CSS
 - łączenie logiki JS z warstwą UI
->>>>>>> eeb3ce8 (Improve README and fix card animation interaction)

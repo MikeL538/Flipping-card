@@ -22,22 +22,6 @@ body {
   width: 100vw;
 }
 
-.div-button {
-  background-color: transparent;
-  border-radius: 15px;
-  border: none;
-  color: rgb(71, 69, 69);
-  cursor: pointer;
-  font-weight: 700;
-  height: 300px;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  z-index: 10;
-}
-
 .container {
   background-image: url(./images/background.jpg);
   background-position: center;
@@ -158,10 +142,6 @@ body {
 
 @media screen and (max-width: 600px) {
   .container {
-    max-width: 100vw;
-  }
-
-  .div-button {
     max-width: 100vw;
   }
 }

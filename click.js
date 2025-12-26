@@ -1,8 +1,9 @@
-const flipBtn = document.querySelector(".div-button");
 const cardContainer = document.querySelector(".container");
 const vanish = document.querySelectorAll(".vanish");
 
-flipBtn.addEventListener("click", function () {
+cardContainer.addEventListener("click", function () {
+  cardContainer.style.pointerEvents = "none";
+
   if (cardContainer.classList.contains("flip")) {
     cardContainer.classList.remove("flip");
     cardContainer.classList.add("flip-back");
@@ -26,4 +27,8 @@ flipBtn.addEventListener("click", function () {
       element.classList.add("appear");
     });
   }
+
+  setTimeout(() => {
+    cardContainer.style.pointerEvents = "all";
+  }, 900);
 });
